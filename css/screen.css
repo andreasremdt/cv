@@ -1,11 +1,11 @@
-a[href] {
+a[href]:not([download]) {
   color: var(--gray-dark);
   text-decoration: none;
   position: relative;
   transition: background-color .15s linear;
 }
 
-a[href]::before {
+a[href]:not([download])::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -15,8 +15,8 @@ a[href]::before {
   background-color: var(--yellow-dark);
 }
 
-a[href]:hover,
-a[href]:focus {
+a[href]:not([download]):hover,
+a[href]:not([download]):focus {
   background-color: var(--yellow-dark);
 }
 
@@ -38,9 +38,66 @@ footer {
   display: none;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50px;
+  position: relative;
+}
+
+nav a,
+nav button {
+  margin-left: 10px;
+  transition: color .15s linear;
+  cursor: pointer;
+  color: inherit;
+}
+
+nav > a:hover,
+nav > a:focus,
+nav button:hover,
+nav button:focus {
+  color: var(--yellow-dark);
+}
+
+#menu {
+  position: absolute;
+  top: 100%;
+  right: -10px;
+  padding: 0 10px;
+  background-color: white;
+  border-radius: 0 0 .5rem .5rem;
+  border: 1px solid #e8e8e8;
+  border-top: 2px solid var(--yellow-dark);
+  text-align: right;
+}
+
+#menu::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 16px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-top: 2px solid var(--yellow-dark);
+  border-right: 2px solid var(--yellow-dark);
+  transform: rotate(-45deg);
+}
+
+#menu h4 {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+#menu a::before {
+  content: none;
+}
+
 @media screen and (min-width: 800px) {
   header {
-    margin: 20px -40px 40px;
+    margin: 0 -40px 40px;
     padding: 40px 40px 20px;
     border-radius: 1rem;
     display: flex;

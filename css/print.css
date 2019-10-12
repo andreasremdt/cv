@@ -18,6 +18,10 @@ article:nth-child(4) {
   padding-top: 60px;
 }
 
+nav {
+  display: none;
+}
+
 section:nth-child(6) {
   break-inside: avoid;
   padding-top: 60px;

@@ -38,7 +38,7 @@ body {
   font-size: 14px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: unset;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--gray-dark);
@@ -60,6 +60,10 @@ h2, h3 {
 
 h3 > span {
   font-weight: 400;
+}
+
+button {
+  all: unset;
 }
 
 figure {
@@ -108,8 +112,12 @@ p, ul, ol, td {
 
 svg {
   margin-right: 3px;
-  color: var(--gray-dark);
   vertical-align: middle;
+  pointer-events: none;
+}
+
+li svg {
+  color: var(--gray-dark);
 }
 
 main {

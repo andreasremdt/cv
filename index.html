@@ -15,6 +15,32 @@
   </head>
   <body>
     <main>
+      <nav>
+        <a href="/files/cv-andreas-remdt-extended-de.pdf" download="Extended Résumé Andreas Remdt (DE)" aria-label="Download résumé">
+          <svg width="20" height="20">
+            <use href="/icons/symbol-defs.svg#icon-download"></use>
+          </svg>
+        </a>
+        <button type="button" data-action="toggle-print" aria-label="Print résumé">
+          <svg width="20" height="20">
+            <use href="/icons/symbol-defs.svg#icon-print"></use>
+          </svg>
+        </button>
+        <button type="button" data-action="toggle-menu" aria-label="Toggle the menu">
+          <svg width="20" height="20">
+            <use href="/icons/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <div id="menu" hidden role="menu">
+          <h4>Other versions:</h4>
+          <ul class="l-reset">
+            <li role="menuitem"><a href="/extended-de.html">German Extended (EU)</a></li>
+            <li role="menuitem"><a href="/short-de.html">German Short (US)</a></li> 
+            <li role="menuitem"><a href="/short-en.html">English Short (US)</a></li>
+          </ul>
+        </div>
+      </nav>
       <header>
         <div>
           <figure>
@@ -333,5 +359,7 @@
         </p>
       </footer>
     </main>
+
+    <script src="/js/main.js" async></script>
   </body>
 </html>
