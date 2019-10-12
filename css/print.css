@@ -1,0 +1,28 @@
+a[href] {
+  color: var(--gray-dark);
+}
+
+header {
+  margin-top: 40px;
+}
+
+footer {
+  display: block;
+}
+
+article {
+  break-inside: avoid;
+}
+
+article:nth-child(4) {
+  padding-top: 60px;
+}
+
+section:nth-child(6) {
+  break-inside: avoid;
+  padding-top: 60px;
+}
+
+footer {
+  margin-top: 100px;
+}
