@@ -28,6 +28,7 @@
 :root {
   --gray-medium: hsl(232, 13%, 45%);
   --gray-dark: hsl(209, 51%, 11%);
+  --gray-light: hsl(0, 0%, 67%);
   --yellow-light: hsl(45, 67%, 96%);
   --yellow-dark: hsl(39, 93%, 61%);
 }
@@ -99,6 +100,28 @@ td:first-child {
   padding-right: 20px;
 }
 
+input[type="radio"] {
+  margin: 0 5px 0;
+}
+
+fieldset {
+  margin: unset;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid var(--gray-medium);
+}
+
+legend {
+  padding: 0 5px;
+  color: var(--gray-dark);
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  color: var(--gray-medium);
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -148,6 +171,10 @@ header > div:first-child {
 
 .mb-2 {
   margin-bottom: 15px;
+}
+
+.mt-2 {
+  margin-top: 15px;
 }
 
 .l-reset {

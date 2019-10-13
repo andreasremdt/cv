@@ -33,12 +33,18 @@
         </button>
 
         <div id="menu" hidden role="menu">
-          <h4>Other versions:</h4>
-          <ul class="l-reset">
-            <li role="menuitem"><a href="/extended-de.html">German Extended (EU)</a></li>
-            <li role="menuitem"><a href="/short-de.html">German Short (US)</a></li> 
-            <li role="menuitem"><a href="/short-en.html">English Short (US)</a></li>
-          </ul>
+          <form data-action="form">
+            <fieldset>
+              <legend>Language</legend>
+
+              <label>
+                <input type="radio" name="lang" value="de"> German
+              </label>
+              <label>
+                <input type="radio" name="lang" value="en"> English
+              </label>
+            </fieldset>
+          </form>
         </div>
       </nav>
       <header>
@@ -57,7 +63,7 @@
           <ul class="l-reset">
             <li>Wexstraße 13</li>
             <li>10715 Berlin</li>
-            <li class="mb-2">Deutschland</li>
+            <li class="mb-2" data-i18n="header.country">Deutschland</li>
             <li>
               <svg width="16" height="16">
                 <use href="/icons/symbol-defs.svg#icon-phone"></use>
@@ -82,26 +88,26 @@
 
       <section>
         <div>
-          <h2>Allgemein</h2>
+          <h2 data-i18n="general.title">Allgemein</h2>
         </div>
         <div>
           <table>
             <tbody>
               <tr>
-                <td>Geburtsort:</td>
+                <td data-i18n="general.birthplace">Geburtsort:</td>
                 <td>16515 Oranienburg, Brandenburg, DE</td>
               </tr>
               <tr>
-                <td>Geburtsdatum:</td>
+                <td data-i18n="general.birthdate">Geburtsdatum:</td>
                 <td>13. Januar 1993</td>
               </tr>
               <tr>
-                <td>Familienstand:</td>
-                <td>ledig</td>
+                <td data-i18n="general.civilstatus">Familienstand:</td>
+                <td data-i18n="general.single">ledig</td>
               </tr>
               <tr>
-                <td>Staatsangehörigkeit:</td>
-                <td>Deutsch</td>
+                <td data-i18n="general.nationality">Staatsangehörigkeit:</td>
+                <td data-i18n="general.german">Deutsch</td>
               </tr>
             </tbody>
           </table>
@@ -110,72 +116,48 @@
 
       <section>
         <div>
-          <h2>Berufserfahrung</h2>
+          <h2 data-i18n="experience.title">Berufserfahrung</h2>
         </div>
         <div>
           <article>
-            <h3>Software Engineer / <span>Camunda Services GmbH</span></h3>
-            <span class="font-small">Nov 2018 - heute, 10961 Berlin, Deutschland</span>
+            <h3 data-i18n="experience.$0.title">Software Engineer / <span>Camunda Services GmbH</span></h3>
+            <span data-i18n="experience.$0.date" class="font-small">Nov 2018 - heute, 10961 Berlin, Deutschland</span>
             <ul>
-              <li>Frontend-Entwicklung von <a href="https://cawemo.com" target="_blank" rel="noopener nofollow">Cawemo</a> in React, MobX, Material-UI, Node.js u. a.</li>
-              <li>Implementierung von Unit, Integration und E2E-Tests</li>
-              <li>Projektmanagement / Implementierung neuer Features</li>
-              <li>Steigerung der Codequalität durch Design Patterns, Tests und Refactorings</li>
+              <li data-i18n="experience.$0.$0">Frontend-Entwicklung von <a href="https://cawemo.com" target="_blank" rel="noopener nofollow">Cawemo</a> in React, MobX, Material-UI, Node.js u. a.</li>
+              <li data-i18n="experience.$0.$1">Implementierung von Unit, Integration und E2E-Tests</li>
+              <li data-i18n="experience.$0.$2">Projektmanagement / Implementierung neuer Features</li>
+              <li data-i18n="experience.$0.$3">Steigerung der Codequalität durch Design Patterns, Tests und Refactorings</li>
             </ul>
           </article>
           <article>
-            <h3>Webentwickler / <span>Umweltministerium</span></h3>
-            <span class="font-small">Sep 2016 - Aug 2018, Jarabacoa, Dominikanische Republik</span>
+            <h3 data-i18n="experience.$1.title">Webentwickler / <span>Umweltministerium</span></h3>
+            <span  data-i18n="experience.$1.date" class="font-small">Sep 2016 - Aug 2018, Jarabacoa, Dominikanische Republik</span>
             <ul>
-              <li>Planung & Realisierung interner Webapplikationen in Vue.js, Node.js, u. a.</li>
-              <li>Entwicklung einer <a href="https://institutodelambiente.edu.do/" target="_blank" rel="noopener nofollow">neuen Webseite</a> in Jekyll</li>
-              <li>Administration der internen IT-Landschaft</li>
+              <li data-i18n="experience.$1.$0">Planung & Realisierung interner Webapplikationen in Vue.js, Node.js, u. a.</li>
+              <li data-i18n="experience.$1.$1">Entwicklung einer <a href="https://institutodelambiente.edu.do/" target="_blank" rel="noopener nofollow">neuen Webseite</a> in Jekyll</li>
+              <li data-i18n="experience.$1.$2">Administration der internen IT-Landschaft</li>
             </ul>
           </article>
           <article>
-            <h3>Anwendungsentwickler / <span>Vitra IT Services GmbH</span></h3>
-            <span class="font-small">Aug 2014 - Sep 2016, 79576 Weil am Rhein, Deutschland</span>
+            <h3 data-i18n="experience.$2.title">Anwendungsentwickler / <span>Vitra IT Services GmbH</span></h3>
+            <span data-i18n="experience.$2.date" class="font-small">Aug 2014 - Sep 2016, 79576 Weil am Rhein, Deutschland</span>
             <ul>
-              <li>Realisierung einer <a href="https://vcs.vitra.com/" target="_blank" rel="noopener nofollow">neuen Produktwebseite</a></li>
-              <li>Entwicklung von internen Tools in Node.js</li>
-              <li>Erstellung von Videoanleitungen für Endanwender</li>
-              <li>Durchführung von Softwareschulungen für Kunden</li>
-              <li>Verfassung interner Dokumentationen</li>
-              <li>Einführung & Wartung einer globalen, internen Videoplattform</li>
-              <li>Mitarbeit bei Anwendungstest und Paketierung</li>
+              <li data-i18n="experience.$2.$0">Realisierung einer <a href="https://vcs.vitra.com/" target="_blank" rel="noopener nofollow">neuen Produktwebseite</a></li>
+              <li data-i18n="experience.$2.$1">Entwicklung von internen Tools in Node.js</li>
+              <li data-i18n="experience.$2.$2">Erstellung von Videoanleitungen für Endanwender</li>
+              <li data-i18n="experience.$2.$3">Durchführung von Softwareschulungen für Kunden</li>
+              <li data-i18n="experience.$2.$4">Verfassung interner Dokumentationen</li>
+              <li data-i18n="experience.$2.$5">Einführung & Wartung einer globalen, internen Videoplattform</li>
+              <li data-i18n="experience.$2.$6">Mitarbeit bei Anwendungstest und Paketierung</li>
             </ul>
           </article>
           <article>
-            <h3>Netzwerkadministrator / <span>Vitrashop Services GmbH</span></h3>
-            <span class="font-small">Sep 2013 - Aug 2014, 79676 Weil am Rhein, Deutschland</span>
+            <h3 data-i18n="experience.$3.title">Netzwerkadministrator / <span>Vitrashop Services GmbH</span></h3>
+            <span  data-i18n="experience.$3.date" class="font-small">Sep 2013 - Aug 2014, 79676 Weil am Rhein, Deutschland</span>
             <ul>
-              <li>Administration der Backup-Infrastruktur</li>
-              <li>Installation & Wartung von Computer- und Serversystemen für ein Rechenzentrum</li>
-              <li>Entwicklung & Administration von Applikationen und Prozessen im firmenweiten Enterprise Portal</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <h2>Ausbildung</h2>
-        </div>
-        <div>
-          <article>
-            <h3>Fachinformatiker f. Systemintegration / <span>Vitrashop Services GmbH</span></h3>
-            <span class="font-small">Mai 2010 - Aug 2013, 79576 Weil am Rhein, Deutschland</span>
-            <ul>
-              <li>First & Second Level Support</li>
-              <li>Installation & Wartung interner Hard- und Software (Computer, Server, Netzwerk, VoIP und Drucker)</li>
-              <li>Administration der Backup-Infrastruktur</li>
-              <li>Entwicklung & Administration eines Java-basierten Enterprise Portal</li>
-              <li>Leitung in der Migration der Print Server</li>
-              <li>Verfassung interner Dokumentationen</li>
-              <li>Theoretische IHK-Abschlussnote: 1,8</li>
-              <li>Praktische IHK-Abschlussnote: 82 Punkte</li>
-              <li>Abschlussprojekt: Implementierung einer Self-Service Passwortverwaltung, genutzt von ~1000 Mitarbeitern</li>
-              <li>Engagement als “Ausbildungsbotschafter” für die IHK an regionalen Schulen</li>
+              <li data-i18n="experience.$3.$0">Administration der Backup-Infrastruktur</li>
+              <li data-i18n="experience.$3.$1">Installation & Wartung von Computer- und Serversystemen für ein Rechenzentrum</li>
+              <li data-i18n="experience.$3.$2">Entwicklung & Administration von Applikationen und Prozessen im firmenweiten Enterprise Portal</li>
             </ul>
           </article>
         </div>
@@ -183,42 +165,66 @@
 
       <section>
         <div>
-          <h2>Kenntnisse</h2>
+          <h2 data-i18n="education.title">Ausbildung</h2>
         </div>
         <div>
-          <h3>Programmiersprachen</h3>
-          <p class="mt-0">HTML5, CSS3, JavaScript, PHP, MySQL</p>
+          <article>
+            <h3 data-i18n="education.$0.title">Fachinformatiker f. Systemintegration / <span>Vitrashop Services GmbH</span></h3>
+            <span  data-i18n="education.$0.date" class="font-small">Mai 2010 - Aug 2013, 79576 Weil am Rhein, Deutschland</span>
+            <ul>
+              <li data-i18n="education.$0.$0">First & Second Level Support</li>
+              <li data-i18n="education.$0.$1">Installation & Wartung interner Hard- und Software (Computer, Server, Netzwerk, VoIP und Drucker)</li>
+              <li data-i18n="education.$0.$2">Administration der Backup-Infrastruktur</li>
+              <li data-i18n="education.$0.$3">Entwicklung & Administration eines Java-basierten Enterprise Portal</li>
+              <li data-i18n="education.$0.$4">Leitung in der Migration der Print Server</li>
+              <li data-i18n="education.$0.$5">Verfassung interner Dokumentationen</li>
+              <li data-i18n="education.$0.$6" class="mt-2">Theoretische IHK-Abschlussnote: 1,8</li>
+              <li data-i18n="education.$0.$7">Praktische IHK-Abschlussnote: 82 Punkte</li>
+              <li data-i18n="education.$0.$8">Abschlussprojekt: Implementierung einer Self-Service Passwortverwaltung, genutzt von ~1000 Mitarbeitern</li>
+              <li data-i18n="education.$0.$9">Engagement als “Ausbildungsbotschafter” für die IHK an regionalen Schulen</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-          <h3>Frameworks, Libraries</h3>
-          <p class="mt-0">Node.js, React, Vue.js, Laravel, MobX, Material-UI, Jest, Express.js, SCSS, LESS, Mongoose</p>
+      <section>
+        <div>
+          <h2 data-i18n="skills.title">Kenntnisse</h2>
+        </div>
+        <div>
+          <h3 data-i18n="skills.softwarelanguages.title">Programmiersprachen</h3>
+          <p data-i18n="skills.softwarelanguages.text" class="mt-0">HTML5, CSS3, JavaScript, PHP, MySQL</p>
 
-          <h3>Tools</h3>
-          <p class="mt-0">Babel, Webpack, Gulp.js, Jekyll, Wordpress, MongoDB, Git, GitHub, Cypress, Sass, LESS</p>
+          <h3 data-i18n="skills.frameworks.title">Frameworks, Libraries</h3>
+          <p data-i18n="skills.frameworks.text" class="mt-0">Node.js, React, Vue.js, Laravel, MobX, Material-UI, Jest, Express.js, SCSS, LESS, Mongoose</p>
 
-          <h3>Fremdsprachen</h3>
+          <h3 data-i18n="skills.tools.title">Tools</h3>
+          <p data-i18n="skills.tools.text" class="mt-0">Babel, Webpack, Gulp.js, Jekyll, Wordpress, MongoDB, Git, GitHub, Cypress, Sass, LESS</p>
+
+          <h3 data-i18n="skills.languages.title">Fremdsprachen</h3>
           <ul class="mt-0">
-            <li>Deutsch (Muttersprache)</li>
-            <li>Englisch (Niveau C2)</li>
-            <li>Spanisch (Niveau C1)</li>
-            <li>Schwedisch (Niveau A1)</li>
+            <li data-i18n="skills.languages.$0">Deutsch (Muttersprache)</li>
+            <li data-i18n="skills.languages.$1">Englisch (Niveau C2)</li>
+            <li data-i18n="skills.languages.$2">Spanisch (Niveau C1)</li>
+            <li data-i18n="skills.languages.$3">Schwedisch (Niveau A1)</li>
           </ul>
         </div>
       </section>
 
       <section>
         <div>
-          <h2>Sonstige Projekte</h2>
+          <h2 data-i18n="others.title">Sonstige Projekte</h2>
         </div>
         <div>
-          <h3>Leo-Club Weil am Rhein</h3>
-          <p class="mt-0 mb-0">Verantwortlich für Design, Entwicklung, CMS-Integration und Inhalte</p>
+          <h3 data-i18n="others.$0.title">Leo-Club Weil am Rhein</h3>
+          <p data-i18n="others.$0.text" class="mt-0 mb-0">Verantwortlich für Design, Entwicklung, CMS-Integration und Inhalte</p>
 
           <ul class="l-reset l-inline mt-0">
             <li>
               <svg width="16" height="16">
                 <use href="/icons/symbol-defs.svg#icon-url"></use>
               </svg>
-              <a href="https://leo-club-weilamrhein.de" target="_blank" rel="noopener nofollow">Webseite</a>
+              <a href="https://leo-club-weilamrhein.de" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
             </li>
             <li>
               <svg width="16" height="16">
@@ -228,27 +234,27 @@
             </li>
           </ul>
             
-          <h3>Lions-Club Weil am Rhein</h3>
-          <p class="mt-0 mb-0">Verantwortlich für Beratung, Design, Entwicklung und CMS-Integration</p>
+          <h3 data-i18n="others.$1.title">Lions-Club Weil am Rhein</h3>
+          <p data-i18n="others.$1.text" class="mt-0 mb-0">Verantwortlich für Beratung, Design, Entwicklung und CMS-Integration</p>
 
           <ul class="l-reset l-inline mt-0">
             <li>
               <svg width="16" height="16">
                 <use href="/icons/symbol-defs.svg#icon-url"></use>
               </svg>
-              <a href="http://lc-weil.de" target="_blank" rel="noopener nofollow">Webseite</a>
+              <a href="http://lc-weil.de" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
             </li>
           </ul>
           
-          <h3>Zähringer Hütte</h3>
-          <p class="mt-0 mb-0">Verantwortlich für Beratung, Design, Entwicklung und CMS-Integration</p>
+          <h3 data-i18n="others.$2.title">Zähringer Hütte</h3>
+          <p data-i18n="others.$2.text" class="mt-0 mb-0">Verantwortlich für Beratung, Design, Entwicklung und CMS-Integration</p>
 
           <ul class="l-reset l-inline mt-0">
             <li>
               <svg width="16" height="16">
                 <use href="/icons/symbol-defs.svg#icon-url"></use>
               </svg>
-              <a href="https://zaehringer-huette.de" target="_blank" rel="noopener nofollow">Webseite</a>
+              <a href="https://zaehringer-huette.de" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
             </li>
             <li>
               <svg width="16" height="16">
@@ -258,15 +264,15 @@
             </li>
           </ul>
             
-          <h3>Litebox</h3>
-          <p class="mt-0 mb-0">Entwicklung einer modernen Lightbox für die Einbindung von Bildern auf Webseiten</p>
+          <h3 data-i18n="others.$3.title">Litebox</h3>
+          <p data-i18n="others.$3.text" class="mt-0 mb-0">Entwicklung einer modernen Lightbox für die Einbindung von Bildern auf Webseiten</p>
 
           <ul class="l-reset l-inline mt-0">
             <li>
               <svg width="16" height="16">
                 <use href="/icons/symbol-defs.svg#icon-url"></use>
               </svg>
-              <a href="https://andreasremdt.github.io/litebox/" target="_blank" rel="noopener nofollow">Webseite</a>
+              <a href="https://andreasremdt.github.io/litebox/" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
             </li>
             <li>
               <svg width="16" height="16">
@@ -280,30 +286,28 @@
 
       <section>
         <div>
-          <h2>Hobbies</h2>
+          <h2 data-i18n="hobbies.title">Hobbies</h2>
         </div>
         <div>
-          <h3>Martial Arts</h3>
+          <h3 data-i18n="hobbies.$0.title">Martial Arts</h3>
           <ul class="mt-0">
-            <li>Mitglied im Wing Tsun Zentrum Weil am Rhein von 2003 bis 2009</li>
-            <li>Mitglied im Taekwon-Do-Center Dreiländereck von 2014 bis 2016</li>
+            <li data-i18n="hobbies.$0.$0">Mitglied im Wing Tsun Zentrum Weil am Rhein von 2003 bis 2009</li>
+            <li data-i18n="hobbies.$0.$1">Mitglied im Taekwon-Do-Center Dreiländereck von 2014 bis 2016</li>
           </ul>
 
-          <h3>Publikationen</h3>
-          <p class="mt-0">Author auf Medium für technische Artikel<br>
-            <a href="https://medium.com/@andreas.remdt" target="_blank" rel="noopener nofollow">https://medium.com/@andreas.remdt</a>
-          </p>
+          <h3 data-i18n="hobbies.$1.title">Publikationen</h3>
+          <p data-i18n="hobbies.$1.text" class="mt-0 mb-0">Author auf Medium für technische Artikel</p>
+          <p class="mt-0"><a href="https://medium.com/@andreas.remdt" target="_blank" rel="noopener nofollow">https://medium.com/@andreas.remdt</a></p>
 
-          <h3>Fotografie</h3>
-          <p class="mt-0">Landschafts- und Naturfotografie<br>
-            <a href="https://500px.com/andreasremdt" target="_blank" rel="noopener nofollow">https://500px.com/andreasremdt</a>
-          </p>
+          <h3 class="mt-2" data-i18n="hobbies.$2.title">Fotografie</h3>
+          <p data-i18n="hobbies.$2.text" class="mt-0 mb-0">Landschafts- und Naturfotografie</p>
+          <p class="mt-0"><a href="https://500px.com/andreasremdt" target="_blank" rel="noopener nofollow">https://500px.com/andreasremdt</a></p>
         </div>
       </section>
 
       <section>
         <div>
-          <h2>Links</h2>
+          <h2 data-i18n="links.title">Links</h2>
         </div>
         <div>
           <ul class="l-reset mt-0">
@@ -360,6 +364,6 @@
       </footer>
     </main>
 
-    <script src="/js/main.js" async></script>
+    <script src="/js/main.js" type="module"></script>
   </body>
 </html>
