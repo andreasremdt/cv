@@ -1,9 +1,35 @@
+body {
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
 a[href] {
   color: var(--dark-gray);
 }
 
-header {
-  margin-top: 40px;
+h1 {
+  font-size: 34px;
+}
+
+h2, h3 {
+  font-size: 16px;
+}
+
+.font-small {
+  font-size: 12px;
+}
+
+.lead {
+  font-size: 18px;
+}
+
+main {
+  padding: 0;
+}
+
+.page {
+  height: 25.7cm;
+  padding: 2cm;
 }
 
 footer {
@@ -14,19 +40,16 @@ article {
   break-inside: avoid;
 }
 
-article:nth-child(4) {
-  padding-top: 60px;
-}
-
 nav {
   display: none;
 }
 
-section:nth-child(6) {
-  break-inside: avoid;
-  padding-top: 60px;
-}
-
 footer {
   margin-top: 100px;
+}
+
+/* TEMP */
+header {
+  margin: -2cm -2cm 0 -2cm;
+  padding: 2cm 2cm 1cm 2cm;
 }

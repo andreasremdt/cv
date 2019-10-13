@@ -47,16 +47,16 @@
           </form>
         </div>
       </nav>
-      <header>
-        <div>
-          <figure>
+
+      <div class="page">
+        <header class="grid">
+          <figure class="grid-left">
             <picture>
               <source srcset="/images/portrait-2x.webp 2x, /images/portrait.webp" type="image/webp">
               <img srcset="/images/portrait-2x.jpg 2x, /images/portrait.jpg" src="/images/portrait.jpg" alt="Portrait of Andreas Remdt" width="150" height="212">
             </picture>
           </figure>
-        </div>
-        <div>
+
           <h1>Andreas Remdt</h1>
           <p class="lead">Software Engineer</p>
 
@@ -83,14 +83,10 @@
               <a href="https://andreasremdt.com" target="_blank" rel="noopener nofollow">https://andreasremdt.com</a>
             </li>
           </ul>
-        </div>
-      </header>
+        </header>
 
-      <section>
-        <div>
-          <h2 data-i18n="general.title">Allgemein</h2>
-        </div>
-        <div>
+        <section class="grid">
+          <h2 data-i18n="general.title" class="grid-left">Allgemein</h2>
           <table>
             <tbody>
               <tr>
@@ -111,14 +107,11 @@
               </tr>
             </tbody>
           </table>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <div>
-          <h2 data-i18n="experience.title">Berufserfahrung</h2>
-        </div>
-        <div>
+        <section class="grid">
+          <h2 data-i18n="experience.title" class="grid-left">Berufserfahrung</h2>
+
           <article>
             <h3 data-i18n="experience.$0.title">Software Engineer / <span>Camunda Services GmbH</span></h3>
             <span data-i18n="experience.$0.date" class="font-small">Nov 2018 - heute, 10961 Berlin, Deutschland</span>
@@ -151,6 +144,13 @@
               <li data-i18n="experience.$2.$6">Mitarbeit bei Anwendungstest und Paketierung</li>
             </ul>
           </article>
+        </section>
+      </div>
+
+      <div class="page">
+        <section class="grid">
+          <div></div>
+
           <article>
             <h3 data-i18n="experience.$3.title">Netzwerkadministrator / <span>Vitrashop Services GmbH</span></h3>
             <span  data-i18n="experience.$3.date" class="font-small">Sep 2013 - Aug 2014, 79676 Weil am Rhein, Deutschland</span>
@@ -160,14 +160,11 @@
               <li data-i18n="experience.$3.$2">Entwicklung & Administration von Applikationen und Prozessen im firmenweiten Enterprise Portal</li>
             </ul>
           </article>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <div>
-          <h2 data-i18n="education.title">Ausbildung</h2>
-        </div>
-        <div>
+        <section class="grid">
+          <h2 data-i18n="education.title" class="grid-left">Ausbildung</h2>
+
           <article>
             <h3 data-i18n="education.$0.title">Fachinformatiker f. Systemintegration / <span>Vitrashop Services GmbH</span></h3>
             <span  data-i18n="education.$0.date" class="font-small">Mai 2010 - Aug 2013, 79576 Weil am Rhein, Deutschland</span>
@@ -184,132 +181,128 @@
               <li data-i18n="education.$0.$9">Engagement als “Ausbildungsbotschafter” für die IHK an regionalen Schulen</li>
             </ul>
           </article>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <div>
-          <h2 data-i18n="skills.title">Kenntnisse</h2>
-        </div>
-        <div>
-          <h3 data-i18n="skills.softwarelanguages.title">Programmiersprachen</h3>
-          <p data-i18n="skills.softwarelanguages.text" class="mt-0">HTML5, CSS3, JavaScript, PHP, MySQL</p>
+        <section class="grid">
+          <h2 data-i18n="skills.title" class="grid-left">Kenntnisse</h2>
 
-          <h3 data-i18n="skills.frameworks.title">Frameworks, Libraries</h3>
-          <p data-i18n="skills.frameworks.text" class="mt-0">Node.js, React, Vue.js, Laravel, MobX, Material-UI, Jest, Express.js, SCSS, LESS, Mongoose</p>
+          <article>
+            <h3 data-i18n="skills.softwarelanguages.title">Programmiersprachen</h3>
+            <p data-i18n="skills.softwarelanguages.text" class="mt-0">HTML5, CSS3, JavaScript, PHP, MySQL</p>
 
-          <h3 data-i18n="skills.tools.title">Tools</h3>
-          <p data-i18n="skills.tools.text" class="mt-0">Babel, Webpack, Gulp.js, Jekyll, Wordpress, MongoDB, Git, GitHub, Cypress, Sass, LESS</p>
+            <h3 data-i18n="skills.frameworks.title">Frameworks, Libraries</h3>
+            <p data-i18n="skills.frameworks.text" class="mt-0">Node.js, React, Vue.js, Laravel, MobX, Material-UI, Jest, Express.js, SCSS, LESS, Mongoose</p>
 
-          <h3 data-i18n="skills.languages.title">Fremdsprachen</h3>
-          <ul class="mt-0">
-            <li data-i18n="skills.languages.$0">Deutsch (Muttersprache)</li>
-            <li data-i18n="skills.languages.$1">Englisch (Niveau C2)</li>
-            <li data-i18n="skills.languages.$2">Spanisch (Niveau C1)</li>
-            <li data-i18n="skills.languages.$3">Schwedisch (Niveau A1)</li>
-          </ul>
-        </div>
-      </section>
+            <h3 data-i18n="skills.tools.title">Tools</h3>
+            <p data-i18n="skills.tools.text" class="mt-0">Babel, Webpack, Gulp.js, Jekyll, Wordpress, MongoDB, Git, GitHub, Cypress, Sass, LESS</p>
 
-      <section>
-        <div>
-          <h2 data-i18n="others.title">Sonstige Projekte</h2>
-        </div>
-        <div>
-          <h3 data-i18n="others.$0.title">Leo-Club Weil am Rhein</h3>
-          <p data-i18n="others.$0.text" class="mt-0 mb-0">Verantwortlich für Design, Entwicklung, CMS-Integration und Inhalte</p>
+            <h3 data-i18n="skills.languages.title">Fremdsprachen</h3>
+            <ul class="mt-0">
+              <li data-i18n="skills.languages.$0">Deutsch (Muttersprache)</li>
+              <li data-i18n="skills.languages.$1">Englisch (Niveau C2)</li>
+              <li data-i18n="skills.languages.$2">Spanisch (Niveau C1)</li>
+              <li data-i18n="skills.languages.$3">Schwedisch (Niveau A1)</li>
+            </ul>
+          </article>
+        </section>
+      </div>
 
-          <ul class="l-reset l-inline mt-0">
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons/symbol-defs.svg#icon-url"></use>
-              </svg>
-              <a href="https://leo-club-weilamrhein.de" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons/symbol-defs.svg#icon-github"></use>
-              </svg>
-              <a href="https://github.com/andreasremdt/leo-club" target="_blank" rel="noopener nofollow">GitHub</a>
-            </li>
-          </ul>
+      <div class="page">
+        <section class="grid">
+          <h2 data-i18n="others.title" class="grid-left">Sonstige Projekte</h2>
+
+          <article>
+            <h3 data-i18n="others.$0.title">Leo-Club Weil am Rhein</h3>
+            <p data-i18n="others.$0.text" class="mt-0 mb-0">Verantwortlich für Design, Entwicklung, CMS-Integration und Inhalte</p>
+
+            <ul class="l-reset l-inline mt-0">
+              <li>
+                <svg width="16" height="16">
+                  <use href="/icons/symbol-defs.svg#icon-url"></use>
+                </svg>
+                <a href="https://leo-club-weilamrhein.de" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
+              </li>
+              <li>
+                <svg width="16" height="16">
+                  <use href="/icons/symbol-defs.svg#icon-github"></use>
+                </svg>
+                <a href="https://github.com/andreasremdt/leo-club" target="_blank" rel="noopener nofollow">GitHub</a>
+              </li>
+            </ul>
+              
+            <h3 data-i18n="others.$1.title">Lions-Club Weil am Rhein</h3>
+            <p data-i18n="others.$1.text" class="mt-0 mb-0">Verantwortlich für Beratung, Design, Entwicklung und CMS-Integration</p>
+
+            <ul class="l-reset l-inline mt-0">
+              <li>
+                <svg width="16" height="16">
+                  <use href="/icons/symbol-defs.svg#icon-url"></use>
+                </svg>
+                <a href="http://lc-weil.de" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
+              </li>
+            </ul>
             
-          <h3 data-i18n="others.$1.title">Lions-Club Weil am Rhein</h3>
-          <p data-i18n="others.$1.text" class="mt-0 mb-0">Verantwortlich für Beratung, Design, Entwicklung und CMS-Integration</p>
+            <h3 data-i18n="others.$2.title">Zähringer Hütte</h3>
+            <p data-i18n="others.$2.text" class="mt-0 mb-0">Verantwortlich für Beratung, Design, Entwicklung und CMS-Integration</p>
 
-          <ul class="l-reset l-inline mt-0">
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons/symbol-defs.svg#icon-url"></use>
-              </svg>
-              <a href="http://lc-weil.de" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
-            </li>
-          </ul>
+            <ul class="l-reset l-inline mt-0">
+              <li>
+                <svg width="16" height="16">
+                  <use href="/icons/symbol-defs.svg#icon-url"></use>
+                </svg>
+                <a href="https://zaehringer-huette.de" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
+              </li>
+              <li>
+                <svg width="16" height="16">
+                  <use href="/icons/symbol-defs.svg#icon-github"></use>
+                </svg>
+                <a href="https://github.com/andreasremdt/zaehringer-huette" target="_blank" rel="noopener nofollow">GitHub</a>
+              </li>
+            </ul>
+              
+            <h3 data-i18n="others.$3.title">Litebox</h3>
+            <p data-i18n="others.$3.text" class="mt-0 mb-0">Entwicklung einer modernen Lightbox für die Einbindung von Bildern auf Webseiten</p>
+
+            <ul class="l-reset l-inline mt-0">
+              <li>
+                <svg width="16" height="16">
+                  <use href="/icons/symbol-defs.svg#icon-url"></use>
+                </svg>
+                <a href="https://andreasremdt.github.io/litebox/" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
+              </li>
+              <li>
+                <svg width="16" height="16">
+                  <use href="/icons/symbol-defs.svg#icon-github"></use>
+                </svg>
+                <a href="https://github.com/andreasremdt/litebox" target="_blank" rel="noopener nofollow">GitHub</a>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="grid">
+          <h2 data-i18n="hobbies.title" class="grid-left">Hobbies</h2>
           
-          <h3 data-i18n="others.$2.title">Zähringer Hütte</h3>
-          <p data-i18n="others.$2.text" class="mt-0 mb-0">Verantwortlich für Beratung, Design, Entwicklung und CMS-Integration</p>
+          <article>
+            <h3 data-i18n="hobbies.$0.title">Martial Arts</h3>
+            <ul class="mt-0">
+              <li data-i18n="hobbies.$0.$0">Mitglied im Wing Tsun Zentrum Weil am Rhein von 2003 bis 2009</li>
+              <li data-i18n="hobbies.$0.$1">Mitglied im Taekwon-Do-Center Dreiländereck von 2014 bis 2016</li>
+            </ul>
 
-          <ul class="l-reset l-inline mt-0">
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons/symbol-defs.svg#icon-url"></use>
-              </svg>
-              <a href="https://zaehringer-huette.de" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons/symbol-defs.svg#icon-github"></use>
-              </svg>
-              <a href="https://github.com/andreasremdt/zaehringer-huette" target="_blank" rel="noopener nofollow">GitHub</a>
-            </li>
-          </ul>
-            
-          <h3 data-i18n="others.$3.title">Litebox</h3>
-          <p data-i18n="others.$3.text" class="mt-0 mb-0">Entwicklung einer modernen Lightbox für die Einbindung von Bildern auf Webseiten</p>
+            <h3 data-i18n="hobbies.$1.title">Publikationen</h3>
+            <p data-i18n="hobbies.$1.text" class="mt-0 mb-0">Author auf Medium für technische Artikel</p>
+            <p class="mt-0"><a href="https://medium.com/@andreas.remdt" target="_blank" rel="noopener nofollow">https://medium.com/@andreas.remdt</a></p>
 
-          <ul class="l-reset l-inline mt-0">
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons/symbol-defs.svg#icon-url"></use>
-              </svg>
-              <a href="https://andreasremdt.github.io/litebox/" target="_blank" rel="noopener nofollow" data-i18n="general.website">Webseite</a>
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons/symbol-defs.svg#icon-github"></use>
-              </svg>
-              <a href="https://github.com/andreasremdt/litebox" target="_blank" rel="noopener nofollow">GitHub</a>
-            </li>
-          </ul>
-        </div>
-      </section>
+            <h3 class="mt-2" data-i18n="hobbies.$2.title">Fotografie</h3>
+            <p data-i18n="hobbies.$2.text" class="mt-0 mb-0">Landschafts- und Naturfotografie</p>
+            <p class="mt-0"><a href="https://500px.com/andreasremdt" target="_blank" rel="noopener nofollow">https://500px.com/andreasremdt</a></p>
+          </article>
+        </section>
 
-      <section>
-        <div>
-          <h2 data-i18n="hobbies.title">Hobbies</h2>
-        </div>
-        <div>
-          <h3 data-i18n="hobbies.$0.title">Martial Arts</h3>
-          <ul class="mt-0">
-            <li data-i18n="hobbies.$0.$0">Mitglied im Wing Tsun Zentrum Weil am Rhein von 2003 bis 2009</li>
-            <li data-i18n="hobbies.$0.$1">Mitglied im Taekwon-Do-Center Dreiländereck von 2014 bis 2016</li>
-          </ul>
+        <section class="grid">
+          <h2 data-i18n="links.title" class="grid-left">Links</h2>
 
-          <h3 data-i18n="hobbies.$1.title">Publikationen</h3>
-          <p data-i18n="hobbies.$1.text" class="mt-0 mb-0">Author auf Medium für technische Artikel</p>
-          <p class="mt-0"><a href="https://medium.com/@andreas.remdt" target="_blank" rel="noopener nofollow">https://medium.com/@andreas.remdt</a></p>
-
-          <h3 class="mt-2" data-i18n="hobbies.$2.title">Fotografie</h3>
-          <p data-i18n="hobbies.$2.text" class="mt-0 mb-0">Landschafts- und Naturfotografie</p>
-          <p class="mt-0"><a href="https://500px.com/andreasremdt" target="_blank" rel="noopener nofollow">https://500px.com/andreasremdt</a></p>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <h2 data-i18n="links.title">Links</h2>
-        </div>
-        <div>
           <ul class="l-reset mt-0">
             <li>
               <svg width="16" height="16">
@@ -354,14 +347,14 @@
               <a href="https://medium.com/@andreas.remdt" target="_blank" rel="noopener nofollow">https://medium.com/@andreas.remdt</a>
             </li>
           </ul>
-        </div>
-      </section>
+        </section>
 
-      <footer>
-        <p>Berlin, 10. Oktober 2019<br>
-          Andreas Remdt
-        </p>
-      </footer>
+        <footer>
+          <p>Berlin, 10. Oktober 2019<br>
+            Andreas Remdt
+          </p>
+        </footer>
+        </div>
     </main>
 
     <script src="/js/main.js" type="module"></script>
