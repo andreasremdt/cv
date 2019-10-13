@@ -16,23 +16,53 @@
   <body>
     <main>
       <nav>
-        <a href="/files/cv-andreas-remdt-extended-de.pdf" download="Extended Résumé Andreas Remdt (DE)" aria-label="Download résumé">
+        <button type="button" data-action="toggle-menu" data-target="#downloads" aria-label="Download résumé">
           <svg width="20" height="20">
             <use href="/icons/symbol-defs.svg#icon-download"></use>
           </svg>
-        </a>
+        </button>
         <button type="button" data-action="toggle-print" aria-label="Print résumé">
           <svg width="20" height="20">
             <use href="/icons/symbol-defs.svg#icon-print"></use>
           </svg>
         </button>
-        <button type="button" data-action="toggle-menu" aria-label="Toggle the menu">
+        <button type="button" data-action="toggle-menu" data-target="#settings" aria-label="Toggle the menu">
           <svg width="20" height="20">
             <use href="/icons/symbol-defs.svg#icon-menu"></use>
           </svg>
         </button>
 
-        <div id="menu" hidden role="menu">
+        <div class="menu" hidden role="menu" id="downloads">
+          <h4>Choose a version:</h4>
+          <ul class="l-reset">
+            <li>
+              <svg width="20" height="20">
+                <use href="/icons/symbol-defs.svg#icon-download"></use>
+              </svg>
+              <a href="/files/compact-en.pdf" download="Résumé Andreas Remdt Compact (EN)">Compact (EN)</a>
+            </li>
+            <li>
+              <svg width="20" height="20">
+                <use href="/icons/symbol-defs.svg#icon-download"></use>
+              </svg>
+              <a href="/files/compact-de.pdf" download="Résumé Andreas Remdt Compact (DE)">Compact (DE)</a>
+            </li>
+            <li>
+              <svg width="20" height="20">
+                <use href="/icons/symbol-defs.svg#icon-download"></use>
+              </svg>
+              <a href="/files/extended-en.pdf" download="Résumé Andreas Remdt Extended (EN)">Extended (EN)</a>
+            </li>
+            <li>
+              <svg width="20" height="20">
+                <use href="/icons/symbol-defs.svg#icon-download"></use>
+              </svg>
+              <a href="/files/extended-de.pdf" download="Résumé Andreas Remdt Extended (DE)">Extended (DE)</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu" hidden role="menu" id="settings">
           <form data-action="form">
             <fieldset>
               <legend>Language</legend>

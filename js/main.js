@@ -3,16 +3,17 @@ import Translator from "./translator.js";
 (function() {
   "use strict";
 
-  var menu = document.getElementById('menu');
   var translator = new Translator();
   
   translator.load();
 
-  function handlePrintClick() {
+  function togglePrint() {
     window.print();
   }
 
-  function handleMenuClick() {
+  function toggleMenu(selector) {
+    var menu = document.querySelector(selector);
+
     if (menu.hasAttribute("hidden")) {
       menu.removeAttribute("hidden");
     } else {
@@ -21,19 +22,21 @@ import Translator from "./translator.js";
   }
 
   function handleMenuClose(evt) {
-    if (evt.target.dataset.action === "toggle-menu") {
-      return;
+    if (evt.type === "keydown") {
+      if (evt.key !== "Escape") {
+        return;
+      }
+    } else if (evt.type === "click") {
+      if (evt.target.dataset.action === "toggle-menu" || evt.target.closest(".menu")) {
+        return;
+      }
     }
-    
-    if (!evt.target.closest("#menu") && !menu.hasAttribute("hidden")) {
-      menu.setAttribute("hidden", true);
-    }
-  }
 
-  function handleKeyDown(evt) {
-    if (!menu.hasAttribute("hidden") && evt.key === "Escape") {
+    var menus = document.querySelectorAll('[role="menu"]');
+
+    menus.forEach((menu) => {
       menu.setAttribute("hidden", true);
-    }
+    });
   }
 
   function handleFormClick(evt) {
@@ -46,9 +49,16 @@ import Translator from "./translator.js";
     }
   }
 
-  document.querySelector('[data-action="toggle-print"]').addEventListener("click", handlePrintClick);
-  document.querySelector('[data-action="toggle-menu"]').addEventListener("click", handleMenuClick);
+  function handleNavigationClick(evt) {
+    if (evt.target.dataset.action === "toggle-menu") {
+      toggleMenu(evt.target.dataset.target);
+    } else if (evt.target.dataset.action === "toggle-print") {
+      togglePrint();
+    }
+  }
+
   document.querySelector('[data-action="form"]').addEventListener("click", handleFormClick);
+  document.querySelector("nav").addEventListener("click", handleNavigationClick);
   document.body.addEventListener("click", handleMenuClose);
-  window.addEventListener("keydown", handleKeyDown);
+  window.addEventListener("keydown", handleMenuClose);
 })();

@@ -134,14 +134,14 @@ label {
   color: var(--medium-gray);
 }
 
-a[href]:not([download]) {
+a[href] {
   color: var(--dark-gray);
   text-decoration: none;
   position: relative;
   transition: background-color .15s linear;
 }
 
-a[href]:not([download])::before {
+a[href]::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -151,8 +151,8 @@ a[href]:not([download])::before {
   background-color: var(--dark-yellow);
 }
 
-a[href]:not([download]):hover,
-a[href]:not([download]):focus {
+a[href]:hover,
+a[href]:focus {
   background-color: var(--dark-yellow);
 }
 

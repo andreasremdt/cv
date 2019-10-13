@@ -10,44 +10,28 @@ nav {
   position: relative;
 }
 
-nav a,
-nav button {
+nav > button {
   margin-left: 10px;
   transition: color .15s linear;
   cursor: pointer;
   color: inherit;
 }
 
-nav > a:hover,
-nav > a:focus,
 nav button:hover,
 nav button:focus {
   color: var(--dark-yellow);
 }
 
-#menu {
+.menu {
   position: absolute;
   top: 100%;
-  right: -10px;
+  right: 0;
   padding: 20px;
   background-color: white;
   border-radius: 0 0 .5rem .5rem;
   box-shadow: 0 3px 25px rgba(0, 0, 0, .05);
   border-top: 2px solid var(--dark-yellow);
   z-index: 2;
-}
-
-#menu::before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  right: 16px;
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-top: 2px solid var(--dark-yellow);
-  border-right: 2px solid var(--dark-yellow);
-  transform: rotate(-45deg);
 }
 
 @media screen and (min-width: 800px) {
@@ -60,7 +44,7 @@ nav button:focus {
 
 @media screen and (max-width: 800px) {
   figure {
-    margin: 0 20px 40px auto;
+    margin: 0 20px 40px 0;
   }
 
   header {
