@@ -1,5 +1,5 @@
 a[href]:not([download]) {
-  color: var(--gray-dark);
+  color: var(--dark-gray);
   text-decoration: none;
   position: relative;
   transition: background-color .15s linear;
@@ -12,26 +12,26 @@ a[href]:not([download])::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--yellow-dark);
+  background-color: var(--dark-yellow);
 }
 
 a[href]:not([download]):hover,
 a[href]:not([download]):focus {
-  background-color: var(--yellow-dark);
+  background-color: var(--dark-yellow);
 }
 
-h2::before {
+h2::before, h1::before  {
   content: "";
   position: absolute;
-  top: -5px;
+  top: 0;
   left: 0;
   width: 40%;
   height: 2px;
-  background-color: var(--yellow-dark);
+  background-color: var(--dark-yellow);
 }
 
 header {
-  background-color: var(--yellow-light);
+  background-color: var(--light-yellow);
 }
 
 footer {
@@ -58,18 +58,19 @@ nav > a:hover,
 nav > a:focus,
 nav button:hover,
 nav button:focus {
-  color: var(--yellow-dark);
+  color: var(--dark-yellow);
 }
 
 #menu {
   position: absolute;
   top: 100%;
   right: -10px;
-  padding: 10px;
+  padding: 20px;
   background-color: white;
   border-radius: 0 0 .5rem .5rem;
-  border: 1px solid #e8e8e8;
-  border-top: 2px solid var(--yellow-dark);
+  box-shadow: 0 3px 25px rgba(0, 0, 0, .05);
+  border-top: 2px solid var(--dark-yellow);
+  z-index: 2;
 }
 
 #menu::before {
@@ -80,8 +81,8 @@ nav button:focus {
   width: 10px;
   height: 10px;
   background-color: white;
-  border-top: 2px solid var(--yellow-dark);
-  border-right: 2px solid var(--yellow-dark);
+  border-top: 2px solid var(--dark-yellow);
+  border-right: 2px solid var(--dark-yellow);
   transform: rotate(-45deg);
 }
 
@@ -109,11 +110,16 @@ nav button:focus {
   }
 
   figure {
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+    margin-left: auto;
   }
 
   h2 {
     margin-bottom: 20px;
     font-size: 25px;
+  }
+  
+  h1 {
+    font-size: 40px;
   }
 }
