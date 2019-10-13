@@ -25,13 +25,13 @@ export default {
     $1: {
       title: "Webentwickler / <span>Umweltministerium</span>",
       date: "Sep 2016 - Aug 2018, Jarabacoa, Dominikanische Republik",
-      $0: "Planung & Realisierung interner Webapplikationen in Vue.js, Node.js, u. a.",
+      $0: "Planung & Realisierung interner Webapplikationen in Vue.js, Node.js u. a.",
       $1: 'Entwicklung einer <a href="https://institutodelambiente.edu.do/" target="_blank" rel="noopener nofollow">neuen Webseite</a> in Jekyll',
       $2: "Administration der internen IT-Landschaft"
     },
     $2: {
       title: "Anwendungsentwickler / <span>Vitra IT Services GmbH</span>",
-      date: "Aug 2014 - Sep 2016, 79576 Weil am Rhein, Deutschland",
+      date: "Sep 2014 - Aug 2016, 79576 Weil am Rhein, Deutschland",
       $0: 'Realisierung einer <a href="https://vcs.vitra.com" target="_blank" rel="noopener nofollow">neuen Produktwebseite</a>',
       $1: "Entwicklung von internen Tools in Node.js",
       $2: "Erstellung von Videoanleitungen für Endanwender",

@@ -28,9 +28,16 @@ class Translator {
     import(`../i18n/${this._lang}.js`).then((resources) => {
       this.translate(resources.default);
       this.toggleInput();
+      this.toggleLangTag();
     }).catch(() => {
       console.error(`Could not load "${this._lang}.js". Please make sure that the path is correct.`);
     });
+  }
+
+  toggleLangTag() {
+    if (document.documentElement.lang !== this._lang) {
+      document.documentElement.lang = this._lang;
+    }
   }
   
   translate(translation) {
