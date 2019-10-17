@@ -228,16 +228,20 @@ header {
   color: var(--dark-gray);
 }
 
-@media (min-width: 800px) {
+.grid {
+  display: grid;
+  grid-template-columns: 200px auto;
+  margin-bottom: 35px;
+}
+
+.grid-left {
+  grid-row: 1 / 5;
+  align-self: start;
+}
+
+@media screen and (max-width: 800px) {
   .grid {
-    display: grid;
-    grid-template-columns: 200px auto;
-    margin-bottom: 35px;
-  }
-  
-  .grid-left {
-    grid-row: 1 / 5;
-    align-self: start;
+    display: block;
   }
 }
 
