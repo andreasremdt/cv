@@ -3,7 +3,10 @@ import Translator from "./translator.js";
 (function() {
   "use strict";
 
-  var translator = new Translator();
+  var translator = new Translator({
+    persist: true,
+    languages: ["en", "de"]
+  });
   
   translator.load();
 

@@ -1,37 +1,52 @@
 "use strict";
 
 class Translator {
-  constructor() {
+  constructor(options = {}) {
+    this._options = Object.assign({}, this.defaultConfig, options);
     this._lang = this.getLanguage();
     this._elements = document.querySelectorAll("[data-i18n]");
   }
 
   getLanguage() {
-    if (localStorage.getItem("language")) {
-      return localStorage.getItem("language");
+    if (!this._options.detectLanguage) {
+      return this._options.defaultLanguage;
+    }
+    
+    var stored = localStorage.getItem("language");
+
+    if (this._options.persist && stored) {
+      return stored;
     }
     
     var lang = navigator.languages ? navigator.languages[0] : navigator.language;
-    
-    if (/\w{2}-\w{2}/i.test(lang)) {
-      return lang.split("-")[0];
-    }
-    
-    return lang;
+
+    return lang.substr(0, 2);
   }
 
   load(lang = null) {
     if (lang) {
+      if (!this._options.languages.includes(lang)) {
+        return;
+      }
+
       this._lang = lang;
     }
-  
-    import(`../i18n/${this._lang}.js`).then((resources) => {
-      this.translate(resources.default);
-      this.toggleInput();
-      this.toggleLangTag();
-    }).catch(() => {
-      console.error(`Could not load "${this._lang}.js". Please make sure that the path is correct.`);
-    });
+
+    var path = `${this._options.filesLocation}/${this._lang}.json`;
+
+    fetch(path)
+      .then((response) => response.json())
+      .then((translation) => {
+        this.translate(translation);
+        this.toggleLangTag();
+
+        if (this._options.persist) {
+          localStorage.setItem("language", this._lang);
+        }
+      })
+      .catch(() => {
+        console.error(`Could not load ${path}. Please make sure that the path is correct.`);
+      });
   }
 
   toggleLangTag() {
@@ -52,8 +67,14 @@ class Translator {
     this._elements.forEach(replace);
   }
 
-  toggleInput() {
-    document.querySelector(`input[type="radio"][value="${this._lang}"]`).checked = true;
+  get defaultConfig() {
+    return {
+      persist: false,
+      languages: ["en"],
+      defaultLanguage: "en",
+      detectLanguage: true,
+      filesLocation: "/i18n"
+    };
   }
 }
 
