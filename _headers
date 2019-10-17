@@ -1,0 +1,6 @@
+/*
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Content-Security-Policy: default-src 'self'; object-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; form-action 'none'; base-uri 'none'; frame-ancestors 'none';
